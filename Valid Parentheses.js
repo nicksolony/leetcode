@@ -3,19 +3,20 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-    debugger
-    let arr = s.split('')
-    if (arr.length % 2 === 0){
-    if ((arr.shift()=="(" && arr.pop()==")") || (arr.shift()=="[" && arr.pop()=="]") || (arr.shift()=="{" && arr.pop()=="}") || (arr.shift()=="(" && arr.shift()==")") || (arr.shift()=="[" && arr.shift()=="]") || (arr.shift()=="{" && arr.shift()=="}")) {
-            if(arr.length === 0) {
-            return true
-            } else {
-               return isValid(arr.join(''))
-            }
+    
+    let stack = [];
+
+    for (i=0; i<s.length; i++) {
+        let last_element = stack[stack.length-1]
+        if(s[i]==="(" || s[i]==="{" || s[i]==="[") {
+            stack.push(s[i])
+        } else if (
+            (last_element==="(" && s[i]===")")||(last_element==="[" && s[i]==="]")||(last_element==="{" && s[i]==="}")){
+            stack.pop()
         } else {
             return false
         }
-    } else {
-        return false
     }
+
+    return stack.length ? false : true
 };
