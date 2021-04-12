@@ -36,8 +36,7 @@ var removeDuplicates = function(nums) {
             return nums.length;
         } else {
         if (nums[current]!==nums[current+1]) {
-            current++;
-            dups(current,nums);
+            dups(current+1,nums);
         } else {
             nums.splice(current+1,1);
             dups(current,nums)
