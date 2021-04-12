@@ -32,8 +32,7 @@ var removeDuplicates = function(nums) {
     dups(0,nums);
     
     function dups(current,nums) {
-        let last = nums.length-1;
-        if (current === last) {
+        if (current === nums.length-1) {
             return nums.length;
         } else {
         if (nums[current]!==nums[current+1]) {
