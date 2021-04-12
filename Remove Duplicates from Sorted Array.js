@@ -14,9 +14,9 @@
 //        if (nums[current]!==nums[i]) {
 //            current++;
 //            nums[current]=nums[i]
-   
+
 //        }
-   
+
 //    }
 //        console.log(nums)
 //   return current +1;
@@ -24,23 +24,23 @@
 
 // THIS SOLUTION I BUILD MYSELF USING RECURSION
 
-var removeDuplicates = function(nums) {
-    if (nums.length===0) {
+var removeDuplicates = function (nums) {
+    if (nums.length === 0) {
         return 0;
     }
-     
-    dups(0,nums);
-    
-    function dups(current,nums) {
-        if (current === nums.length-1) {
+
+    dups(0, nums);
+
+    function dups(current, nums) {
+        if (current === nums.length - 1) {
             return nums.length;
         } else {
-        if (nums[current]!==nums[current+1]) {
-            dups(current+1,nums);
-        } else {
-            nums.splice(current+1,1);
-            dups(current,nums)
-        }
+            if (nums[current] !== nums[current + 1]) {
+                dups(current + 1, nums);
+            } else {
+                nums.splice(current + 1, 1);
+                dups(current, nums)
+            }
         }
     };
-  };
+};
