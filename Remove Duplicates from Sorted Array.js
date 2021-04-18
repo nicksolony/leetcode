@@ -32,7 +32,7 @@ var removeDuplicates = function (nums) {
     dups(0, nums);
 
     function dups(current, nums) {
-        if (current !== nums.length - 1) {
+        if (current !== nums.length - 1) {  
             if (nums[current] !== nums[current + 1]) {
                 dups(current + 1, nums);
             } else {
