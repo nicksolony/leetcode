@@ -14,20 +14,19 @@
     /*set current position of needle to -1 */
     let pos = 0;
     let result = -1;
-    let needleSize = needle.length
     
     find(haystack, needle, pos);
     
     function find(haystack, needle, pos) {
-        if (pos<=haystack.length-1) {
-            if (haystack.slice(pos,pos+needleSize)===needle) {
+            if (haystack.slice(pos,pos+needle.length)===needle) {
                 result = pos;
             } else {
                 pos++;
-                find(haystack, needle, pos)
+                if (pos<=haystack.length-1) {
+                    find(haystack, needle, pos)    
+                }
             }    
         }
-    }
     
     return result;
     }
