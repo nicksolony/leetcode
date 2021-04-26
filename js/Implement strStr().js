@@ -11,7 +11,7 @@
         return 0;
     } else {
 
-    /*set current position of needle to -1 */
+    /*set current position of to 0 and result to -1 */
     let pos = 0;
     let result = -1;
     
