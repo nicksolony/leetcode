@@ -12,19 +12,20 @@
 */
  var searchInsert = function(nums, target) {
     
-    let pos = 0;    
+    let pos = 0;
+    let result = 0;  
 
     function find(nums,target, pos) {
         if (nums[pos]===target) {
-            return pos;
+            result = pos;
         } else if (nums[pos+1]> target) {
-            return pos++;
+            result = pos++;
         } else {
             pos++;
             find(nums,target,pos)
         }    
     }
     
-
+    return result;
     
 };
