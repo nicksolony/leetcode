@@ -5,6 +5,7 @@
  */
 
 /** 
+ * My solution and logic
     1. take nums[i] compare with target
     2. if equals target return i
     3. else if num [i] is less then target return i+1
