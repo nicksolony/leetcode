@@ -11,14 +11,20 @@
     4. else i++ go back to step 1
 */
  var searchInsert = function(nums, target) {
-    let index = 0;
+    
+    let pos = 0;    
 
-    if (nums[index]===target) {
-        return index;
-    } else if (nums[index]< target) {
-        return index++;
-    } else {
-        index++;
-        searchInsert(nums,index)
+    function find(nums,target, pos) {
+        if (nums[pos]===target) {
+            return pos;
+        } else if (nums[pos+1]> target) {
+            return pos++;
+        } else {
+            pos++;
+            find(nums,target,pos)
+        }    
     }
+    
+
+    
 };
