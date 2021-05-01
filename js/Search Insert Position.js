@@ -31,3 +31,19 @@
     }
     return result;
 };
+
+/* FOUND FASTER solution:
+    1. create a new array by adding target
+    2. sort new array
+    3. return indexOf target within new array 
+    
+    CODE - 
+
+    var searchInsert = function(nums, target) {
+        let newArray = [...nums, target].sort((a, b) => {return a - b})
+        const position = newArray.indexOf(target)
+        return position
+    };
+
+
+*/
