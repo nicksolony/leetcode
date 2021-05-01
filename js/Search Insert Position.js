@@ -15,7 +15,9 @@
     let pos = 0;
     let result = 0;  
 
+    find(nums,target,pos);
     function find(nums,target, pos) {
+        debugger
         if (nums[pos]===target) {
             result = pos;
         } else if (nums[pos+1]> target) {
