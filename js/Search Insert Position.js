@@ -20,7 +20,7 @@
         function find(nums,target, pos) {
             if (nums[pos]===target) {
                 result = pos;
-            } else if (nums[pos+1]> target || pos+1>nums.length) {
+            } else if (nums[pos+1]> target || pos+1===nums.length) {
                 result = pos+1;
             } else {
                 pos++;
