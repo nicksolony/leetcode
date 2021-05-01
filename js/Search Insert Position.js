@@ -17,11 +17,10 @@
 
     find(nums,target,pos);
     function find(nums,target, pos) {
-        debugger
         if (nums[pos]===target) {
             result = pos;
-        } else if (nums[pos+1]> target) {
-            result = pos++;
+        } else if (nums[pos+1]> target || pos+1>nums.length) {
+            result = pos+1;
         } else {
             pos++;
             find(nums,target,pos)
