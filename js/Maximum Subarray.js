@@ -9,8 +9,15 @@
     let currSum = 0
 
     for (let i = 0; i < nums.length; i++) {
-        currSum = currSum + nums[i];
-        
+        currSum = nums[i];
+        maxSum = currSum;
+        for (let j = i+1; j < nums.length; j++) {
+            currSum = currSum + nums[j];
+            if (currSum > maxSum) {
+                maxSum = currSum
+            }
+        }
+        return maxSum;
     }
 
 
