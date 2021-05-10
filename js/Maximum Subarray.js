@@ -7,19 +7,20 @@
     // starting form first element find max element for each option - this is slow option
     let maxSum = 0
     let currSum = 0
-
+    debugger
     for (let i = 0; i < nums.length; i++) {
         currSum = nums[i];
-        maxSum = currSum;
+        if (currSum > maxSum) {
+            maxSum = currSum
+        }
         for (let j = i+1; j < nums.length; j++) {
             currSum = currSum + nums[j];
             if (currSum > maxSum) {
                 maxSum = currSum
             }
         }
-        return maxSum;
     }
-
+    return maxSum;
 
 
     //Kadane's algorithm solution
