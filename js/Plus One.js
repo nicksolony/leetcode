@@ -14,7 +14,7 @@ var plusOne = function (digits) {
 
     function add(arr, i) {
         // debugger
-        if (arr[i]) {
+        if (arr[i]+1) {
             if (arr[i] + 1 > 9) {
                 arr[i] = (arr[i] + 1) % 10;
                 i++
