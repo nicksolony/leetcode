@@ -5,10 +5,8 @@
  var mySqrt = function(x) {
     // it workes but not alowed
     // return parseInt(Math.sqrt(x));
-    if (x===0) {
-        return 0;
-    } else if (x===1) {
-        return 1;
+    if (x<=1) {
+        return x;
     } else {
 
         for (let i = 2; i <= x; i++) {
