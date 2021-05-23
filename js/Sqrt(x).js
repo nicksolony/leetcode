@@ -11,13 +11,10 @@
         return 1;
     } else {
 
-        for (let i = 2; i < x; i++) {
+        for (let i = 2; i <= x; i++) {
             if(i*i>x) {
-                let result = i-1;
-                return result;
+                return i-1;
             }
         }
-
     }
-    return result;
 };
