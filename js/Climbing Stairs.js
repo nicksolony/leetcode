@@ -3,7 +3,7 @@
  * @return {number}
  */
 var climbStairs = function (n) {
-    switch(n) {
+    switch (n) {
         case 1:
             return n;
         case 2:
@@ -12,11 +12,11 @@ var climbStairs = function (n) {
             let prevStep = 1;
             let topStep = 2;
             for (let i = 3; i <= n; i++) {
-                let newBottom=topStep;
+                let newBottom = topStep;
                 topStep = topStep + prevStep
                 prevStep = newBottom;
             };
             return topStep;
     }
-    
+
 };
