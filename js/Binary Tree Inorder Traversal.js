@@ -11,5 +11,17 @@
  * @return {number[]}
  */
  var inorderTraversal = function(root) {
-    
+    let list =[];
+
+    return checkTree(root,list);
+
+    function checkTree (root,list) {
+        if (root===null) {
+            return list
+        }
+        list = checkTree(root.left, list);
+        list.push(root.val);
+        return checkTree(root.right,list);
+    }
+
 };
