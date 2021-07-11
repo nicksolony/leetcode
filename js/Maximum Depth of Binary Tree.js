@@ -11,5 +11,17 @@
  * @return {number}
  */
  var maxDepth = function(root) {
-    
+    let depth = 0;
+
+    function branchDepth(depth,root) {
+        if(root.val) {
+            depth = depth +1;
+            if(root.left) {
+               branchDepth(depth,root.left)
+            } else {
+                branchDepth(depth,root.right)
+            }
+        }
+        return depth;
+    }
 };
