@@ -11,5 +11,5 @@
  * @return {number}
  */
  var minDepth = function(root) {
-    
+   return !root ? 0 : 1 + Math.min(minDepth(root.left),minDepth(root.right))
 };
