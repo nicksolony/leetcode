@@ -16,16 +16,17 @@
     let sum = 0;
 
     function checkTree(root, targetSum, sum) {
-        sum= sum+root.val
         if(root.left===null && root.right ===null) {
-            if(sum ===targetSum){
-                return true;
-            } else {
-                return false;
-            }
-        } else if (root.left) {
+            return sum ===targetSum
+            } else if (root.left===true) {
+            sum=sum+root.val
             checkTree(root.left,targetSum,sum)
-        } checkTree(root.right,targetSum,sum)
-    }
+            } else {
+            sum=sum+root.val
+            checkTree(root.right,targetSum,sum)
+        }
 
-};
+    return checkTree(root, targetSum,0);
+}
+
+ };
