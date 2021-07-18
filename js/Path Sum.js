@@ -11,10 +11,10 @@
  * @param {number} targetSum
  * @return {boolean}
  */
- var hasPathSum = function(root, targetSum) {
-    
-    return checkTree(root, targetSum,0);
-    
+var hasPathSum = function (root, targetSum) {
+
+    return checkTree(root, targetSum, 0);
+
 };
 
 function checkTree(root, targetSum, sum) {
@@ -24,9 +24,9 @@ function checkTree(root, targetSum, sum) {
 
     sum += root.val;
 
-    if(root.left===null && root.right ===null) {
-        return sum ===targetSum;
+    if (root.left === null && root.right === null) {
+        return sum === targetSum;
     }
 
-    return checkTree(root.left,targetSum,sum) || checkTree(root.right,targetSum,sum)
+    return checkTree(root.left, targetSum, sum) || checkTree(root.right, targetSum, sum)
 };
