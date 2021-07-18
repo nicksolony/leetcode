@@ -13,20 +13,20 @@
  */
  var hasPathSum = function(root, targetSum) {
     
-    let sum = 0;
-
-    function checkTree(root, targetSum, sum) {
-        if(root.left===null && root.right ===null) {
-            return sum ===targetSum
-            } else if (root.left===true) {
-            sum=sum+root.val
-            checkTree(root.left,targetSum,sum)
-            } else {
-            sum=sum+root.val
-            checkTree(root.right,targetSum,sum)
-        }
-
     return checkTree(root, targetSum,0);
-}
+    
+};
 
- };
+function checkTree(root, targetSum, sum) {
+    if (!root) {
+        return false;
+    }
+
+    sum += root.val;
+
+    if(root.left===null && root.right ===null) {
+        return sum ===targetSum;
+    }
+
+    return checkTree(root.left,targetSum,sum) || checkTree(root.right,targetSum,sum)
+};
