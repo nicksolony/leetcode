@@ -12,12 +12,16 @@
  */
  var isBalanced = function(root) {
     
+    function height(root) {   
+        return !root ? 0 : 1 + Math.max(maxDepth(root.left),maxDepth(root.right));
+    };
+
     if (!root) {
         return true;
     };
         
-    lsub = isBalanced (root.left);
-    rsub = isBalanced (root.right);
+    lsub = height(root.left);
+    rsub = height(root.right);
     if(Math.abs(lsub-rsub)<=1 && isBalanced(root.left) && isBalanced(root.right)) {
         return true;
     };
