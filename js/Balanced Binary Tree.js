@@ -13,7 +13,7 @@
  var isBalanced = function(root) {
     
     function height(root) {   
-        return !root ? 0 : 1 + Math.max(maxDepth(root.left),maxDepth(root.right));
+        return !root ? 0 : 1 + Math.max(height(root.left),height(root.right));
     };
 
     if (!root) {
