@@ -16,9 +16,9 @@
         return true;
     };
         
-    lsub = checkBalance (root.left);
-    rsub = checkBalance (root.right);
-    if(Math.abs(lsub-rsub)<=1 && checkBalance(lsub) && checkBalance(rsub)) {
+    lsub = isBalanced (root.left);
+    rsub = isBalanced (root.right);
+    if(Math.abs(lsub-rsub)<=1 && isBalanced(root.left) && isBalanced(root.right)) {
         return true;
     };
 
