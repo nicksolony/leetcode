@@ -20,4 +20,5 @@
     root.left = sortedArrayToBST(nums.slice(0,middle));
     root.right = sortedArrayToBST(nums.slice(middle+1));
     
+    return root;
 };  
