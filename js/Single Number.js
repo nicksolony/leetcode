@@ -3,8 +3,17 @@
  * @return {number}
  */
  var singleNumber = function(nums) {
-    
-   return nums.forEach(element => {
-        return nums.find(number=>number!==element)
-        });
-    };
+
+    if (nums.length===1) {
+        return nums[0]
+    }
+
+    let result = 0;
+
+    nums.forEach(element => {
+        result = result ^ element
+    });
+
+    return result;
+
+ };
