@@ -2,11 +2,11 @@
  * @param {number} rowIndex
  * @return {number[]}
  */
- var getRow = function(rowIndex) {
-    
+var getRow = function (rowIndex) {
+
     let values = []
 
-    for (let n = 0; n < rowIndex+1; n++) {
+    for (let n = 0; n < rowIndex + 1; n++) {
         values[n] = [];
         values[n][0] = 1;
         for (let k = 1; k < n; k++) {
