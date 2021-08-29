@@ -8,18 +8,19 @@
 
     for (let i = 0; i < prices.length-1; i++) {
         
-        let buyPrice = prices[i];
+        // let buyPrice = prices[i];
         
         for (let j = i+1; j < prices.length; j++) {
             
-            let sellPrice = prices[j];
+            // let sellPrice = prices[j];
 
-            if (sellPrice>buyPrice) {
-                let profit = sellPrice - buyPrice;
+            // if (sellPrice>buyPrice) {
+                // let profit = sellPrice - buyPrice;
+                let profit = prices[j]-prices[i];
                 if (profit>maxProfit) {
                     maxProfit = profit;
                 }
-            }
+            // }
 
         }
         
