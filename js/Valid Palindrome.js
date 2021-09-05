@@ -4,7 +4,7 @@
  */
  var isPalindrome = function(s) {
     let regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"" ]/g;
-    let cleanString = s.replace(regex,'')
+    let cleanString = s.replace(regex,'').toLowerCase;
     let m = parseInt(cleanString.length/2);
     let result;
 
