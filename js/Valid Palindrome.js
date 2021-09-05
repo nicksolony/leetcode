@@ -9,14 +9,13 @@
     let result;
 
     for (let i = 0; i <= m; i++) {
-        
-        if (cleanString[i]==cleanString[cleanString.length-1-i]) {
+        if (cleanString[i]===cleanString[cleanString.length-1-i]) {
             result = true;
         } else {
             result = false;
+            break;
         }
     }
-    console.log(cleanString)
     return result;
 
 };
