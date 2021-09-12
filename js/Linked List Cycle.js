@@ -25,7 +25,7 @@ var hasCycle = function (head) {
         } else {
             fast_t = fast_t.next.next;
             slow_t = slow_t.next;
-        };
+        }
         if (fast_t === slow_t) {
             return true;
         }
