@@ -10,7 +10,7 @@
  * @param {ListNode} head
  * @return {boolean}
  */
- var hasCycle = function(head) {
+var hasCycle = function (head) {
 
     if (!head) {
         return false;
@@ -24,12 +24,12 @@
             return false;
         } else {
             fast_t = fast_t.next.next;
-            slow_t = slow_t.next; 
+            slow_t = slow_t.next;
         };
         if (fast_t === slow_t) {
             return true;
         }
     }
-    
+
 
 };
